@@ -21,7 +21,16 @@ module "docker-workspace" {
     ],
     var.secrets # Additional secrets
   )
-
+  extra_files = [
+    {
+      path = "README.md"
+      content = templatefile("${path.module}/README.md.tpl", {
+        server    = var.github_actions.server,
+        repo_name = var.repo_name,
+        repo_org  = var.repo_org,
+      })
+    }
+  ]
   # Combine GitHub Actions variables with other variables
   vars = concat([
     for _var, _val in var.github_actions : {
@@ -46,3 +55,4 @@ module "docker-workspace" {
     var.vars # Additional variables
   )
 }
+
