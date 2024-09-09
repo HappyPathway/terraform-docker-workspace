@@ -8,7 +8,11 @@
 #     "repo_vars"
 # ]
 variable "github_actions" {
-  type = map(string)
+  type = object({
+    email    = string
+    username = string
+    server   = string
+  })
 }
 
 variable "github_codeowners_team" {
