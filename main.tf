@@ -31,7 +31,7 @@ module "docker-workspace" {
     ],
     [
       {
-        name  = "repo"
+        name  = "docker_repo"
         value = var.repo_name
       }
     ],
