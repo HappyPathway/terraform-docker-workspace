@@ -33,6 +33,14 @@ module "docker-workspace" {
       {
         name  = "docker_repo"
         value = var.repo_name
+      },
+      {
+        name  = docker_hub_org,
+        value = var.docker_hub_org
+      },
+      {
+        name  = "source_image",
+        value = var.source_image
       }
     ],
     var.vars # Additional variables

@@ -74,3 +74,11 @@ variable "archive_on_destroy" {
   description = "Archive the repository on destroy"
   default     = false
 }
+
+variable "docker_hub_org" {
+  type = string
+}
+
+variable "source_image" {
+  type = string
+}
