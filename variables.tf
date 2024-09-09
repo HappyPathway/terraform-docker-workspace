@@ -52,3 +52,9 @@ variable "secrets" {
   default     = []
   description = "Github Action Secrets"
 }
+
+variable "github_token" {
+  type      = string
+  default   = null
+  sensitive = true
+}
