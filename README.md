@@ -29,6 +29,7 @@ No resources.
 | <a name="input_github_org_teams"></a> [github\_org\_teams](#input\_github\_org\_teams) | n/a | <pre>list(object({<br>    id   = string<br>    slug = string<br>  }))</pre> | n/a | yes |
 | <a name="input_github_repo_description"></a> [github\_repo\_description](#input\_github\_repo\_description) | n/a | `string` | n/a | yes |
 | <a name="input_github_token"></a> [github\_token](#input\_github\_token) | n/a | `string` | `null` | no |
+| <a name="input_private_repo"></a> [private\_repo](#input\_private\_repo) | Set the GitHub repository to private | `bool` | `false` | no |
 | <a name="input_repo_name"></a> [repo\_name](#input\_repo\_name) | n/a | `string` | n/a | yes |
 | <a name="input_repo_org"></a> [repo\_org](#input\_repo\_org) | n/a | `string` | n/a | yes |
 | <a name="input_secrets"></a> [secrets](#input\_secrets) | Github Action Secrets | <pre>list(object({<br>    name  = string,<br>    value = string<br>  }))</pre> | `[]` | no |
