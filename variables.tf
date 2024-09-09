@@ -34,6 +34,21 @@ variable "repo_org" {
   type = string
 }
 
-variable "repo_vars" {
-  type = map(string)
+variable "vars" {
+  type = list(object({
+    name  = string,
+    value = string
+  }))
+  default     = []
+  description = "Github Action Vars"
+}
+
+
+variable "secrets" {
+  type = list(object({
+    name  = string,
+    value = string
+  }))
+  default     = []
+  description = "Github Action Secrets"
 }

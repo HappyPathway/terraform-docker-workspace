@@ -11,11 +11,18 @@ module "docker-workspace" {
   enforce_prs             = false
   template_repo           = "dockerhub-workspace"
   template_repo_org       = "HappyPathway"
-  secrets = var.github_token == null ? {} : {
-    GH_TOKEN = var.github_token
-  }
-  vars = merge(
-    var.github_actions,
+  secrets = var.github_token == null ? [] : [
+    {
+      name  = "GH_TOKEN"
+      value = var.github_token
+    }
+  ]
+  vars = concat([
+    for var in var.github_actions : {
+      name  = var.key
+      value = var.value
+    }
+    ],
     var.repo_vars
   )
 }
