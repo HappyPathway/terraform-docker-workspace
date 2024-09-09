@@ -35,7 +35,7 @@ module "docker-workspace" {
         value = var.repo_name
       },
       {
-        name  = docker_hub_org,
+        name  = "docker_hub_org",
         value = var.docker_hub_org
       },
       {
