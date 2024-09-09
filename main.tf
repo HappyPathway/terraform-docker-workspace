@@ -8,7 +8,7 @@ module "docker-workspace" {
   github_repo_description = var.github_repo_description              # Description of the GitHub repository
   github_org_teams        = var.github_org_teams                     # GitHub organization teams
   enforce_prs             = false                                    # Enforce pull requests
-  template_repo           = "dockerhub-workspace"                    # Template repository name
+  template_repo           = "template-dockerhub-workspace"           # Template repository name
   template_repo_org       = "HappyPathway"                           # Organization of the template repository
 
   # Combine the GitHub token secret with other secrets
