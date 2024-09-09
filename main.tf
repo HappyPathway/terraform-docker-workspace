@@ -10,7 +10,7 @@ module "docker-workspace" {
   enforce_prs             = false                                    # Enforce pull requests
   template_repo           = "template-dockerhub-workspace"           # Template repository name
   template_repo_org       = "HappyPathway"                           # Organization of the template repository
-
+  archive_on_destroy      = var.archive_on_destroy                   # Archive the repository on destroy
   # Combine the GitHub token secret with other secrets
   secrets = concat(
     var.github_token == null ? [] : [

@@ -68,3 +68,9 @@ variable "private_repo" {
   description = "Set the GitHub repository to private"
   default     = false
 }
+
+variable "archive_on_destroy" {
+  type        = bool
+  description = "Archive the repository on destroy"
+  default     = false
+}
