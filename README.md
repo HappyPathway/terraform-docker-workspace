@@ -24,6 +24,7 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_archive_on_destroy"></a> [archive\_on\_destroy](#input\_archive\_on\_destroy) | Archive the repository on destroy | `bool` | `false` | no |
 | <a name="input_github_actions"></a> [github\_actions](#input\_github\_actions) | Missing Variables:  [ "github\_actions", "github\_codeowners\_team", "github\_org\_teams", "github\_repo\_description", "repo\_name", "repo\_org", "repo\_vars" ] | <pre>object({<br>    email    = string<br>    username = string<br>    server   = string<br>  })</pre> | n/a | yes |
 | <a name="input_github_codeowners_team"></a> [github\_codeowners\_team](#input\_github\_codeowners\_team) | n/a | `string` | n/a | yes |
 | <a name="input_github_org_teams"></a> [github\_org\_teams](#input\_github\_org\_teams) | n/a | <pre>list(object({<br>    id   = string<br>    slug = string<br>  }))</pre> | n/a | yes |
