@@ -29,6 +29,12 @@ module "docker-workspace" {
       value = _val         # Value of the GitHub Actions variable
     }
     ],
+    [
+      {
+        name  = "repo"
+        value = var.repo_name
+      }
+    ],
     var.vars # Additional variables
   )
 }
