@@ -62,3 +62,9 @@ variable "github_token" {
   default   = null
   sensitive = true
 }
+
+variable "private_repo" {
+  type        = bool
+  description = "Set the GitHub repository to private"
+  default     = false
+}

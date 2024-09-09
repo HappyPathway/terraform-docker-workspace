@@ -1,7 +1,7 @@
 module "docker-workspace" {
   source                  = "app.terraform.io/roknsound/repo/github" # Source of the module
   force_name              = true                                     # Force the name of the workspace
-  github_is_private       = true                                     # Set the GitHub repository to private
+  github_is_private       = var.private_repo                         # Set the GitHub repository to private
   repo_org                = var.repo_org                             # GitHub organization for the repository
   name                    = var.repo_name                            # Name of the repository
   github_codeowners_team  = var.github_codeowners_team               # GitHub team for code owners
