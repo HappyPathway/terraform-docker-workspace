@@ -25,8 +25,8 @@ module "docker-workspace" {
   # Combine GitHub Actions variables with other variables
   vars = concat([
     for _var, _val in var.github_actions : {
-      name  = _var # Name of the GitHub Actions variable
-      value = _val # Value of the GitHub Actions variable
+      name  = "github_${_var}" # Name of the GitHub Actions variable
+      value = _val             # Value of the GitHub Actions variable
     }
     ],
     var.vars # Additional variables
